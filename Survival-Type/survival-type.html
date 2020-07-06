@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="survival-type.css">
+</head>
+<body>
+   <div class="item-container">
+        <div class="item-cell">
+            <div class="bombs-count-down" id="bombs-cooler">0</div>
+            <img src="../Images/mining-game-icons/icon-9.png" class="bombs-cooler-item" alt="">
+        </div>
+        <div class="item-cell">
+           <div class="bombs-count-down" id="shuffle">0</div>
+            <img src="../Images/mining-game-icons/icon-d.png" class="shuffle-item" alt="">
+        </div>
+        <div class="item-cell">
+           <div class="bombs-count-down" id="treasure">0</div>
+            <img src="../Images/mining-game-icons/icon-0-item.png" class="treasure-item" alt="">
+        </div>
+        <div class="item-cell">
+           <div class="bombs-count-down" id="free-swap">0</div>
+            <img src="../Images/mining-game-icons/icon-c.png" class="free-swap-item" alt="">
+        </div>
+        <div class="item-cell">
+           <div class="bombs-count-down" id="dynamite-bombs">0</div>
+            <img src="../Images/mining-game-icons/icon-b.png" class="dynamite-bombs-item" alt="">
+        </div>
+   </div>
+    <div class="score-moves-section">
+        <div class="score-section">
+            <div>Score</div>
+            <div id="player-score">123</div>
+        </div>
+        <div class="survival-section">
+            <div id="life">3</div>
+        </div>
+        
+        <div class="moves-section">
+            <div class="moves-text">Moves</div>
+            <div id="count-moves">1</div>
+        </div>
+   </div>
+
+   <div id="time-container">
+        <div class="alert-won-item">You have just won an item!</div>
+        <div class="pause-board">
+            <div>
+                <a href="../Main-screen/main-screen.html"><img src="../Images/mining-game-icons/home-btn.png" class="pause-home-btn"></a>
+            </div>
+            <div>
+                <img src="../Images/mining-game-icons/new-game-btn.png" class="pause-new-game-btn">
+            </div>
+            <div>
+                <img src="../Images/mining-game-icons/resume-btn.png" class="resume-btn" alt="">
+            </div>
+            <div class="uscore-section">
+                <div class="your-score">Your score:</div>
+                <div class="u-score">1000</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-container">
+       <div class="left-container">
+            <div>
+                <a href="../index.html"><img src="../Images/mining-game-icons/home-btn.png" class="home-btn"></a>
+            </div>
+            <div>
+                <img src="../Images/mining-game-icons/new-game-btn.png" class="new-game-btn">
+            </div>
+            <div>
+                <img src="../Images/mining-game-icons/hints-btn.png" class="give-hints-btn" alt="">
+            </div>
+            <div>
+                <img src="../Images/mining-game-icons/pause-btn.png" class="pause-btn" alt="">
+            </div>
+            <div class="music-sound-btn">
+                <div>
+                    <img src="../Images/mining-game-icons/sound-on.png" class="sound-btn" alt="">
+                </div>
+                <div>
+                    <img src="../Images/mining-game-icons/music-on.png" class="music-btn" alt="">
+                </div>
+            </div>
+       </div>
+
+        <div class="game-container">
+            <div class="row-cell">
+                <div class="game-cell-s">
+                   <div id="1-1-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="1-1">
+                </div>
+                <div class="game-cell">
+                   <div id="2-1-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-4.png" class="image" draggable="false" id="2-1">
+                </div>
+                <div class="game-cell-s">
+                   <div id="3-1-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="3-1">
+                </div>
+                <div class="game-cell">
+                   <div id="4-1-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-3.png" class="image" draggable="false" id="4-1">
+                </div>
+                <div class="game-cell-s">
+                   <div id="5-1-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-5.png" class="image" draggable="false" id="5-1">
+                </div>
+                <div class="game-cell">
+                   <div id="6-1-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-1.png" class="image" draggable="false" id="6-1">
+                </div>
+                <div class="game-cell-s">
+                   <div id="7-1-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="7-1">
+                </div>
+                <div class="game-cell">
+                   <div id="8-1-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-4.png" class="image" draggable="false" id="8-1">
+                </div>
+            </div>
+
+            <div class="row-cell">
+                <div class="game-cell">
+                   <div id="1-2-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-3.png" class="image" draggable="false" id="1-2">
+                </div>
+                <div class="game-cell-s">
+                   <div id="2-2-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-5.png" class="image" draggable="false" id="2-2">
+                </div>
+                <div class="game-cell">
+                   <div id="3-2-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-1.png" class="image" draggable="false" id="3-2">
+                </div>
+                <div class="game-cell-s">
+                   <div id="4-2-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-3.png" class="image" draggable="false" id="4-2">
+                </div>
+                <div class="game-cell">
+                   <div id="5-2-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="5-2">
+                </div>
+                <div class="game-cell-s">
+                   <div id="6-2-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-4.png" class="image" draggable="false" id="6-2">
+                </div>
+                <div class="game-cell">
+                   <div id="7-2-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="7-2">
+                </div>
+                <div class="game-cell-s">
+                   <div id="8-2-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-3.png" class="image" draggable="false" id="8-2">
+                </div>
+            </div>
+
+            <div class="row-cell">
+                <div class="game-cell-s">
+                   <div id="1-3-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-5.png" class="image" draggable="false" id="1-3">
+                </div>
+                <div class="game-cell">
+                   <div id="2-3-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="2-3">
+                </div>
+                <div class="game-cell-s">
+                   <div id="3-3-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-1.png" class="image" draggable="false" id="3-3">
+                </div>
+                <div class="game-cell">
+                   <div id="4-3-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="4-3">
+                </div>
+                <div class="game-cell-s">
+                   <div id="5-3-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-4.png" class="image" draggable="false" id="5-3">
+                </div>
+                <div class="game-cell">
+                   <div id="6-3-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-1.png" class="image" draggable="false" id="6-3">
+                </div>
+                <div class="game-cell-s">
+                   <div id="7-3-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-4.png" class="image" draggable="false" id="7-3">
+                </div>
+                <div class="game-cell">
+                   <div id="8-3-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-1.png" class="image" draggable="false" id="8-3">
+                </div>
+            </div>
+
+            <div class="row-cell">
+                <div class="game-cell">
+                   <div id="1-4-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-3.png" class="image" draggable="false" id="1-4">
+                </div>
+                <div class="game-cell-s">
+                   <div id="2-4-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-5.png" class="image" draggable="false" id="2-4">
+                </div>
+                <div class="game-cell">
+                   <div id="3-4-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-5.png" class="image" draggable="false" id="3-4">
+                </div>
+                <div class="game-cell-s">
+                   <div id="4-4-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="4-4">
+                </div>
+                <div class="game-cell">
+                   <div id="5-4-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-4.png" class="image" draggable="false" id="5-4">
+                </div>
+                <div class="game-cell-s">
+                   <div id="6-4-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="6-4">
+                </div>
+                <div class="game-cell">
+                   <div id="7-4-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="7-4">
+                </div>
+                <div class="game-cell-s">
+                   <div id="8-4-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-3.png" class="image" draggable="false" id="8-4">
+                </div>
+            </div>
+
+            <div class="row-cell">
+                <div class="game-cell-s">
+                   <div id="1-5-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-4.png" class="image" draggable="false" id="1-5">
+                </div>
+                <div class="game-cell">
+                   <div id="2-5-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-5.png" class="image" draggable="false" id="2-5">
+                </div>
+                <div class="game-cell-s">
+                   <div id="3-5-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-3.png" class="image" draggable="false" id="3-5">
+                </div>
+                <div class="game-cell">
+                   <div id="4-5-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-1.png" class="image" draggable="false" id="4-5">
+                </div>
+                <div class="game-cell-s">
+                   <div id="5-5-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-1.png" class="image" draggable="false" id="5-5">
+                </div>
+                <div class="game-cell">
+                   <div id="6-5-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-3.png" class="image" draggable="false" id="6-5">
+                </div>
+                <div class="game-cell-s">
+                   <div id="7-5-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-3.png" class="image" draggable="false" id="7-5">
+                </div>
+                <div class="game-cell">
+                   <div id="8-5-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-5.png" class="image" draggable="false" id="8-5">
+                </div>
+            </div>
+
+            <div class="row-cell">
+                <div class="game-cell">
+                   <div id="1-6-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-1.png" class="image" draggable="false" id="1-6">
+                </div>
+                <div class="game-cell-s">
+                   <div id="2-6-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-5.png" class="image" draggable="false" id="2-6">
+                </div>
+                <div class="game-cell">
+                   <div id="3-6-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="3-6">
+                </div>
+                <div class="game-cell-s">
+                   <div id="4-6-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-4.png" class="image" draggable="false" id="4-6">
+                </div>
+                <div class="game-cell">
+                   <div id="5-6-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="5-6">
+                </div>
+                <div class="game-cell-s">
+                   <div id="6-6-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-3.png" class="image" draggable="false" id="6-6">
+                </div>
+                <div class="game-cell">
+                   <div id="7-6-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="7-6">
+                </div>
+                <div class="game-cell-s">
+                   <div id="8-6-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-4.png" class="image" draggable="false" id="8-6">
+                </div>
+            </div>
+
+            <div class="row-cell">
+                <div class="game-cell-s">
+                   <div id="1-7-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="1-7">
+                </div>
+                <div class="game-cell">
+                   <div id="2-7-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-1.png" class="image" draggable="false" id="2-7">
+                </div>
+                <div class="game-cell-s">
+                   <div id="3-7-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="3-7">
+                </div>
+                <div class="game-cell">
+                   <div id="4-7-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-5.png" class="image" draggable="false" id="4-7">
+                </div>
+                <div class="game-cell-s">
+                   <div id="5-7-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-5.png" class="image" draggable="false" id="5-7">
+                </div>
+                <div class="game-cell">
+                   <div id="6-7-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-5.png" class="image" draggable="false" id="6-7">
+                </div>
+                <div class="game-cell-s">
+                   <div id="7-7-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-4.png" class="image" draggable="false" id="7-7">
+                </div>
+                <div class="game-cell">
+                   <div id="8-7-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-1.png" class="image" draggable="false" id="8-7">
+                </div>
+            </div>
+
+            <div class="row-cell">
+                <div class="game-cell">
+                   <div id="1-8-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-5.png" class="image" draggable="false" id="1-8">
+                </div>
+                <div class="game-cell-s">
+                   <div id="2-8-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-5.png" class="image" draggable="false" id="2-8">
+                </div>
+                <div class="game-cell">
+                   <div id="3-8-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-3.png" class="image" draggable="false" id="3-8">
+                </div>
+                <div class="game-cell-s">
+                   <div id="4-8-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="4-8">
+                </div>
+                <div class="game-cell">
+                   <div id="5-8-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-1.png" class="image" draggable="false" id="5-8">
+                </div>
+                <div class="game-cell-s">
+                   <div id="6-8-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-4.png" class="image" draggable="false" id="6-8">
+                </div>
+                <div class="game-cell">
+                   <div id="7-8-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-2.png" class="image" draggable="false" id="7-8">
+                </div>
+                <div class="game-cell-s">
+                   <div id="8-8-bomb"></div>
+                    <img src="../Images/mining-game-icons/icon-3.png" class="image" draggable="false" id="8-8">
+                </div>
+            </div>
+
+        </div>
+
+         <div class="right-container">
+            <table class="high-score-table">
+                <tr class="high-score-row">
+                     <td class="name-0">Kien</td>
+                     <td class="score-0">123</td>
+                </tr>
+                <tr class="high-score-row">
+                     <td class="name-1">Son</td>
+                     <td class="score-1">312</td>
+                </tr>
+                <tr class="high-score-row">
+                     <td class="name-2">Thuy</td>
+                     <td class="score-2">213</td>
+                </tr>
+                <tr class="high-score-row">
+                     <td class="name-3">ytre</td>
+                     <td class="score-3">213</td>
+                </tr>
+                <tr class="high-score-row">
+                     <td class="name-4">kuyjh</td>
+                     <td class="score-4">213</td>
+                </tr>
+             </table>
+        </div>
+    </div>
+    <div>
+          <audio src="../Music-Sound/click.mp3" id="click-sound"></audio>
+          <audio src="../Music-Sound/mouse-hover-sound.mp3" id="mouse-hover-sound"></audio>
+          <audio src="../Music-Sound/swap-sound.mp3" id="swap-sound"></audio>
+          <audio src="../Music-Sound/background-music-lower.mp3" id="background-music"></audio>
+          <audio src="../Music-Sound/bombs-cooler-used.mp3" id="bombs-cooler-used-sound"></audio>
+          <audio src="../Music-Sound/shuffle-used.mp3" id="shuffle-used-sound"></audio>
+          <audio src="../Music-Sound/treasure-created.mp3" id="treasure-created-sound"></audio>
+          <audio src="../Music-Sound/treasure-explosion.mp3" id="treasure-used-sound"></audio>
+          <audio src="../Music-Sound/free-swap-used.mp3" id="free-swap-used-sound"></audio>
+          <audio src="../Music-Sound/dynamite-bombs-used.mp3" id="dynamite-bombs-used-sound"></audio>
+          <audio src="../Music-Sound/hints-used.mp3" id="hints-used-sound"></audio>
+          <audio src="../Music-Sound/combo-1.mp3" id="combo-1-sound"></audio>
+          <audio src="../Music-Sound/combo-2.wav" id="combo-2-sound"></audio>
+          <audio src="../Music-Sound/combo-3.wav" id="combo-3-sound"></audio>
+          <audio src="../Music-Sound/invalid-move-no-combo-move.mp3" id="invalid-move-no-combo-move-sound"></audio>
+          <audio src="../Music-Sound/game-over.mp3" id="game-over-sound"></audio>
+    </div>
+
+    <script type="text/javascript" src="survival-type.js"></script>
+</body>
+</html>
